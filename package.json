@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    
   "dev:front": "vite",
   "dev": "npm run build && npm run server:prod",
   "build": "vite build",
