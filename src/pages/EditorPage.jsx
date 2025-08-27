@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import Client from '../components/Client';
-import Editor from '../components/editor';
+import CodeEditor from '../components/CodeEditor';
 import { initSocket } from '../socket';
 import ACTIONS from '../Action';
 import { useLocation,  useNavigate,
@@ -117,7 +117,7 @@ function leaveRoom(){
             <button className='btn leaveBtn'onClick={leaveRoom}>Leave</button>
         </div>
         <div className='editorWrap'>
-           <Editor socketRef = {socketRef} roomId={roomId} onCodeChange = {(code) =>{codeRef.current = code}} />
+           <CodeEditor socketRef = {socketRef} roomId={roomId} onCodeChange = {(code) =>{codeRef.current = code}} />
         </div>
     </div>
   )

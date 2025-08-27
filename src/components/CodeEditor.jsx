@@ -8,7 +8,7 @@ import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import ACTIONS from '../Action';
 
-const Editor = ({socketRef, roomId,onCodeChange}) => {
+const CodeEditor = ({socketRef, roomId,onCodeChange}) => {
   const editorRef = useRef(null); // ref for textarea
   const cmInstance = useRef(null); // ref for codemirror instance
 
@@ -63,4 +63,4 @@ const Editor = ({socketRef, roomId,onCodeChange}) => {
   );
 };
 
-export default Editor;
+export default CodeEditor;
