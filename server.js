@@ -14,6 +14,9 @@ app.use(express.static(path.join(__dirname, "dist")));
 app.use((req,res,next)=> {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
+// app.get('*', (req,res) => {
+//     res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
 const io = new Server(server, {
   cors: {
     origin: '*', // yaha par frontend ka origin allow kar
